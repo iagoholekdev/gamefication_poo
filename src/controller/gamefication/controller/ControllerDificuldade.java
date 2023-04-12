@@ -8,46 +8,6 @@ public class ControllerDificuldade {
      static int pontos = 100;
      ResourceString resourceStringUtil = new ResourceString();
 
-    static void validateRespostaEasy(int index, int respostaInteger, String respostaString){
-
-        ControllerMain controllerPontos = new ControllerMain();
-        switch(index) {
-            case 1 -> {
-                if (respostaInteger == 2) {
-                    System.out.println("Você acertou!");
-                    pontos = controllerPontos.aumentarPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                } else {
-                    System.out.println("Errouuuu!");
-                    pontos = controllerPontos.diminuirPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                }
-            }
-            case 2 -> {
-                if (respostaInteger == 25) {
-                    System.out.println("Você acertou!");
-                    pontos = controllerPontos.aumentarPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                } else {
-                    System.out.println("Errouuuu!");
-                    pontos = controllerPontos.diminuirPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                }
-            }
-            case 3 -> {
-                if (respostaString.equals("D")) {
-                    System.out.println("Você acertou!");
-                    pontos = controllerPontos.aumentarPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                } else {
-                    System.out.println("Errouuuu!");
-                    pontos = controllerPontos.diminuirPontosNivelEasy(pontos);
-                    System.out.println("Sua quantidade de pontos atual é: " + pontos);
-                }
-            }
-        }
-    }
-
     static void validateJogoMedio(int index,  String respostaString) {
         ControllerMain controllerPontos = new ControllerMain();
 
@@ -145,23 +105,7 @@ public class ControllerDificuldade {
         }
 
 
-    public void JogoFacil(){
-        Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("Quanto é 1+1?");
-        int Resposta = myScanner.nextInt();
-        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.primeiraPergunta, Resposta, "");
-
-        System.out.println("Quanto é 5x5?");
-        Resposta = myScanner.nextInt();
-        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.segundaPergunta, Resposta, "");
-
-        System.out.println("Qual é a letra do alfabeto que está entre C e E?");
-        String RespostaString = myScanner.next();
-        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.terceiraPergunta, 0, RespostaString);
-
-        myScanner.close();
-    }
     public void JogoMedio(){
 
         Scanner myScannerMedio = new Scanner(System.in);
