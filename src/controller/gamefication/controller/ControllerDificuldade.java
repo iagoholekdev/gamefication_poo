@@ -1,9 +1,11 @@
 package controller.gamefication.controller;
+import resources.ResourceString;
+
 import java.util.Scanner;
 
 public class ControllerDificuldade {
      static int pontos = 100;
-
+     ResourceString resourceStringUtil = new ResourceString();
 
     static void validateRespostaEasy(int index, int respostaInteger, String respostaString){
 
@@ -45,7 +47,7 @@ public class ControllerDificuldade {
         }
     }
 
-    static void validateJogoMedio(int index, int respostaInteger, String respostaString) {
+    static void validateJogoMedio(int index,  String respostaString) {
         ControllerMain controllerPontos = new ControllerMain();
 
         switch (index) {
@@ -94,7 +96,7 @@ public class ControllerDificuldade {
 
 
 
-    static void validateJogoHard(int index, int respostaInteger, String respostaString) {
+    static void validateJogoHard(int index, String respostaString) {
 
         ControllerMain controllerPontos = new ControllerMain();
         switch (index) {
@@ -147,15 +149,15 @@ public class ControllerDificuldade {
 
         System.out.println("Quanto é 1+1?");
         int Resposta = myScanner.nextInt();
-        ControllerDificuldade.validateRespostaEasy(1, Resposta, "");
+        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.primeiraPergunta, Resposta, "");
 
         System.out.println("Quanto é 5x5?");
         Resposta = myScanner.nextInt();
-        ControllerDificuldade.validateRespostaEasy(2, Resposta, "");
+        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.segundaPergunta, Resposta, "");
 
         System.out.println("Qual é a letra do alfabeto que está entre C e E?");
         String RespostaString = myScanner.next();
-        ControllerDificuldade.validateRespostaEasy(3, 0, RespostaString);
+        ControllerDificuldade.validateRespostaEasy(resourceStringUtil.terceiraPergunta, 0, RespostaString);
 
         myScanner.close();
     }
@@ -165,15 +167,15 @@ public class ControllerDificuldade {
 
         System.out.println("Qual é capital do Parana?");
         String Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(1, 0, Resposta);
+        ControllerDificuldade.validateJogoMedio(resourceStringUtil.primeiraPergunta,  Resposta);
 
         System.out.println("Qual é árvore simbolo do estado do Paraná?");
         Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(2, 0, Resposta);
+        ControllerDificuldade.validateJogoMedio(resourceStringUtil.segundaPergunta,  Resposta);
 
         System.out.println("Qual é o maior bioma Brasileiro?");
         Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(3, 0, Resposta);
+        ControllerDificuldade.validateJogoMedio(resourceStringUtil.terceiraPergunta,  Resposta);
 
         myScannerMedio.close();
     }
@@ -184,15 +186,15 @@ public class ControllerDificuldade {
 
         System.out.println("Qual é a obra de arte mais cara do mundo");
         String Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(1, 0, Resposta);
+        ControllerDificuldade.validateJogoHard(resourceStringUtil.primeiraPergunta, Resposta);
 
         System.out.println("Quanto tempo durou o regime do apartheid na África do Sul?");
         Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(2, 0, Resposta);
+        ControllerDificuldade.validateJogoHard(resourceStringUtil.segundaPergunta, Resposta);
 
         System.out.println("Quem foi o inventor da vacina?");
         Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(3, 0, Resposta);
+        ControllerDificuldade.validateJogoHard(resourceStringUtil.terceiraPergunta, Resposta);
 
         myScannerHard.close();
 
