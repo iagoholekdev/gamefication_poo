@@ -1,10 +1,10 @@
 package strategy.gamefication.strategy;
 
-import controller.gamefication.controller.ControllerMain;
+import controller.gamefication.controller.ControllerPontos;
 
 public class StrategyJogoFacil {
     public int validateJogoFacil(int index, int RespostaInteger, String RespostaString, int pontos){
-        ControllerMain controllerPontos = new ControllerMain();
+        ControllerPontos controllerPontos = new ControllerPontos();
         switch(index) {
             case 1 -> {
                 if (RespostaInteger == 2) {

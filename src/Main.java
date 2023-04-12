@@ -2,7 +2,7 @@
 // then press Enter. You can now see whitespace characters in your code.
 
 
-import controller.gamefication.controller.ControllerDificuldade;
+import controller.gamefication.controller.ControllerGamefication;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +22,7 @@ public class Main {
                 """;
     }
     public static void main(String[] args) {
-        ControllerDificuldade controllerGame = new ControllerDificuldade();
+        ControllerGamefication controllerGame = new ControllerGamefication();
         System.out.println(Main.printMyBot());
         System.out.println("Sejam bem-vindos ao nosso jogo de perguntas!");
 

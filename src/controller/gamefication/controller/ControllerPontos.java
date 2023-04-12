@@ -1,6 +1,6 @@
 package controller.gamefication.controller;
 
-public class ControllerMain {
+public class ControllerPontos {
 
     public int aumentarPontosNivelEasy(int pontos) {
         final int sumEasy = 10;
