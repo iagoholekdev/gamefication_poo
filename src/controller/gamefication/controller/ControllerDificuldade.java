@@ -1,5 +1,6 @@
 package controller.gamefication.controller;
 import resources.ResourceString;
+import jogo.factory.jogoFacilFactory;
 
 import java.util.Scanner;
 
@@ -201,10 +202,19 @@ public class ControllerDificuldade {
     }
 
     public void Jogar(int dificuldade){
-       switch (dificuldade) {
+      /* switch (dificuldade) {
            case 1 -> JogoFacil();
            case 2 -> JogoMedio();
            default -> JogoHard();
-       }
+       }*/
+
+
+        switch (dificuldade) {
+            case 1 -> {
+              jogoFacilFactory jogoFacil = new jogoFacilFactory().Jogar();
+            }
+            case 2 -> JogoMedio();
+            default -> JogoHard();
+        }
     }
 }
