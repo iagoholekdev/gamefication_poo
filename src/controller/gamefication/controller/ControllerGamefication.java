@@ -4,12 +4,12 @@ import jogo.factory.jogoFacilFactory;
 
 import java.util.Scanner;
 
-public class ControllerDificuldade {
+public class ControllerGamefication {
      static int pontos = 100;
      ResourceString resourceStringUtil = new ResourceString();
 
     static void validateJogoMedio(int index,  String respostaString) {
-        ControllerMain controllerPontos = new ControllerMain();
+        ControllerPontos controllerPontos = new ControllerPontos();
 
         switch (index) {
             case 1 -> {
@@ -59,7 +59,7 @@ public class ControllerDificuldade {
 
     static void validateJogoHard(int index, String respostaString) {
 
-        ControllerMain controllerPontos = new ControllerMain();
+        ControllerPontos controllerPontos = new ControllerPontos();
         switch (index) {
             case 1 -> { if (respostaString.equalsIgnoreCase("Salvatori Mundi")) {
                 System.out.println("Você acertou!");
@@ -112,15 +112,15 @@ public class ControllerDificuldade {
 
         System.out.println("Qual é capital do Parana?");
         String Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(resourceStringUtil.primeiraPergunta,  Resposta);
+        ControllerGamefication.validateJogoMedio(resourceStringUtil.primeiraPergunta,  Resposta);
 
         System.out.println("Qual é árvore simbolo do estado do Paraná?");
         Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(resourceStringUtil.segundaPergunta,  Resposta);
+        ControllerGamefication.validateJogoMedio(resourceStringUtil.segundaPergunta,  Resposta);
 
         System.out.println("Qual é o maior bioma Brasileiro?");
         Resposta = myScannerMedio.next();
-        ControllerDificuldade.validateJogoMedio(resourceStringUtil.terceiraPergunta,  Resposta);
+        ControllerGamefication.validateJogoMedio(resourceStringUtil.terceiraPergunta,  Resposta);
 
         myScannerMedio.close();
     }
@@ -131,15 +131,15 @@ public class ControllerDificuldade {
 
         System.out.println("Qual é a obra de arte mais cara do mundo");
         String Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(resourceStringUtil.primeiraPergunta, Resposta);
+        ControllerGamefication.validateJogoHard(resourceStringUtil.primeiraPergunta, Resposta);
 
         System.out.println("Quanto tempo durou o regime do apartheid na África do Sul?");
         Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(resourceStringUtil.segundaPergunta, Resposta);
+        ControllerGamefication.validateJogoHard(resourceStringUtil.segundaPergunta, Resposta);
 
         System.out.println("Quem foi o inventor da vacina?");
         Resposta = myScannerHard.nextLine();
-        ControllerDificuldade.validateJogoHard(resourceStringUtil.terceiraPergunta, Resposta);
+        ControllerGamefication.validateJogoHard(resourceStringUtil.terceiraPergunta, Resposta);
 
         myScannerHard.close();
 
