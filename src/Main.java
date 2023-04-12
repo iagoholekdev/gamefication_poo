@@ -30,6 +30,7 @@ public class Main {
 
         System.out.println("Escolha a dificuldade! 1 - Fàcil / 2 - Médio / 3 - Hard");
         int dificuldade = myScanner.nextInt();
+
         controllerGame.Jogar(dificuldade);
     }
 }
