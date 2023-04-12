@@ -1,4 +1,4 @@
-package jogo.factory;
+package factory.gamefication.factory;
 
 import java.util.Scanner;
 import resources.ResourceString;
