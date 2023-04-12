@@ -104,7 +104,7 @@ public class ControllerDificuldade {
                 System.out.println("Sua quantidade de pontos atual é: " + pontos);
             } else {
                 System.out.println("Errouuuu!");
-                System.out.println("A resposta correta é: Amazônia");
+                System.out.println("A resposta correta é: Salvatori Mundi");
                 pontos = controllerPontos.diminuirPontosNivelHard(pontos);
                 System.out.println("Sua quantidade de pontos atual é: " + pontos);
             }
@@ -136,7 +136,7 @@ public class ControllerDificuldade {
                     System.out.println("Sua quantidade de pontos atual é: " + pontos);
                 }
 
-                }
+            }
 
             }
         }
